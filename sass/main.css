@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: hsl(214, 17%, 92%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+}
+
+.testimonials {
+  max-width: 85.875rem;
+  margin-bottom: 3vh;
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  gap: 2rem;
+}
+.testimonials .daniel {
+  background-color: hsl(263, 55%, 52%);
+  color: hsl(260, 100%, 95%);
+}
+.testimonials .daniel .image {
+  border: 2px solid hsl(264, 82%, 80%);
+}
+.testimonials .daniel .name,
+.testimonials .daniel .principal {
+  color: hsl(0, 0%, 100%);
+}
+.testimonials .daniel .aspas {
+  display: none;
+}
+.testimonials .jonathan {
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(0, 0%, 81%);
+}
+.testimonials .jonathan .name,
+.testimonials .jonathan .principal {
+  color: hsl(0, 0%, 100%);
+}
+.testimonials .patrick {
+  background-color: hsl(219, 29%, 14%);
+  color: hsl(0, 0%, 81%);
+}
+.testimonials .patrick .image {
+  border: 2px solid hsl(263, 55%, 52%);
+}
+.testimonials .kira,
+.testimonials .jeanette {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(224, 10%, 45%);
+}
+.testimonials .kira .name,
+.testimonials .kira .principal,
+.testimonials .jeanette .name,
+.testimonials .jeanette .principal {
+  color: hsl(217, 19%, 35%);
+}
+
+article {
+  padding: 2rem;
+  border-radius: 0.6rem;
+  box-shadow: 3rem 3rem 5rem rgba(128, 128, 128, 0.404);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+article figure {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+article figcaption {
+  max-width: 6.3rem;
+  line-height: 1.4;
+}
+article span {
+  font-weight: 500;
+  font-size: 0.78rem;
+}
+article .name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+article .image {
+  width: 2.1rem;
+  border-radius: 50%;
+}
+article blockquote p:not(.principal) {
+  font-size: clamp(0.801rem, 3.55vw, 1.04rem);
+  font-weight: 500;
+  line-height: 1.4;
+}
+article blockquote .principal {
+  margin-bottom: 1rem;
+  font-size: clamp(1.299rem, 5vw, 1.6rem);
+  font-weight: 600;
+}
+
+@media (min-width: 40.625rem) {
+  .testimonials {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: "daniel daniel" "jonathan jeanette" "patrick patrick" "kira kira";
+  }
+  .testimonials .daniel {
+    grid-area: daniel;
+  }
+  .testimonials .jonathan {
+    grid-area: jonathan;
+  }
+  .testimonials .jeanette {
+    grid-area: jeanette;
+  }
+  .testimonials .patrick {
+    grid-area: patrick;
+  }
+  .testimonials .kira {
+    grid-area: kira;
+  }
+}
+@media (min-width: 60rem) {
+  .testimonials {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: "daniel daniel jonathan" "jeanette patrick patrick" "kira kira kira";
+  }
+  .testimonials .daniel {
+    grid-area: daniel;
+  }
+  .testimonials .jonathan {
+    grid-area: jonathan;
+  }
+  .testimonials .jeanette {
+    grid-area: jeanette;
+  }
+  .testimonials .patrick {
+    grid-area: patrick;
+  }
+  .testimonials .kira {
+    grid-area: kira;
+  }
+}
+@media (min-width: 78rem) {
+  .testimonials {
+    position: relative;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas: "daniel daniel jonathan kira" "jeanette patrick patrick kira";
+  }
+  .testimonials .daniel {
+    grid-area: daniel;
+  }
+  .testimonials .daniel .aspas {
+    display: block;
+    width: 7.5rem;
+    height: auto;
+    position: absolute;
+    left: clamp(20rem, 32vw, 30rem);
+    top: 0.05rem;
+  }
+  .testimonials .daniel .principal {
+    position: relative;
+    z-index: 1000;
+  }
+  .testimonials .jonathan {
+    grid-area: jonathan;
+  }
+  .testimonials .kira {
+    grid-area: kira;
+  }
+  .testimonials .jeanette {
+    grid-area: jeanette;
+  }
+  .testimonials .patrick {
+    grid-area: patrick;
+  }
+}/*# sourceMappingURL=main.css.map */

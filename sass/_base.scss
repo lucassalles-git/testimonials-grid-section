@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+$barlow-font: "Barlow Semi Condensed", sans-serif;
+
+// Colors
+$purple-50: hsl(260, 100%, 95%);
+$purple-300: hsl(264, 82%, 80%);
+$purple-500: hsl(263, 55%, 52%);
+$white: hsl(0, 0%, 100%);
+$grey-100: hsl(214, 17%, 92%);
+$grey-200: hsl(0, 0%, 81%);
+$grey-400: hsl(224, 10%, 45%);
+$grey-500: hsl(217, 19%, 35%);
+$dark-blue: hsl(219, 29%, 14%);
+$black: hsl(0, 0%, 7%);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  padding: 2rem;
+  background-color: $grey-100;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  font-family: $barlow-font;
+  font-size: 13px;
+}
+
+.testimonials {
+  max-width: 85.875rem;
+  margin-bottom: 3vh;
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  gap: 2rem;
+
+  .daniel {
+    background-color: $purple-500;
+    color: $purple-50;
+
+    .image {
+      border: 2px solid $purple-300;
+    }
+
+    .name,
+    .principal {
+      color: $white;
+    }
+
+    .aspas {
+      display: none;
+    }
+  }
+
+  .jonathan {
+    background-color: $grey-500;
+    color: $grey-200;
+    .name,
+    .principal {
+      color: $white;
+    }
+  }
+
+  .patrick {
+    background-color: $dark-blue;
+    color: $grey-200;
+
+    .image {
+      border: 2px solid $purple-500;
+    }
+  }
+
+  .kira,
+  .jeanette {
+    background-color: $white;
+    color: $grey-400;
+    .name,
+    .principal {
+      color: $grey-500;
+    }
+  }
+}
+
+article {
+  padding: 2rem;
+  border-radius: 0.6rem;
+  box-shadow: 3rem 3rem 5rem rgba(128, 128, 128, 0.404);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  figure {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  figcaption {
+    max-width: 6.3rem;
+    line-height: 1.4;
+  }
+
+  span {
+    font-weight: 500;
+    font-size: 0.78rem;
+  }
+
+  .name {
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+
+  .image {
+    width: 2.1rem;
+    border-radius: 50%;
+  }
+
+  blockquote {
+    p:not(.principal) {
+      font-size: clamp(0.801rem, 3.55vw, 1.04rem);
+      font-weight: 500;
+      line-height: 1.4;
+    }
+    .principal {
+      margin-bottom: 1rem;
+      font-size: clamp(1.299rem, 5vw, 1.6rem);
+      font-weight: 600;
+    }
+  }
+}

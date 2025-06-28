@@ -1,0 +1,99 @@
+
+
+.testimonials {
+
+@media (min-width: 40.625rem) {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "daniel daniel"
+      "jonathan jeanette"
+      "patrick patrick"
+      "kira kira";
+
+    .daniel {
+      grid-area: daniel;
+    }
+    .jonathan {
+      grid-area: jonathan;
+    }
+    .jeanette {
+      grid-area: jeanette;
+    }
+    .patrick {
+      grid-area: patrick;
+    }
+    .kira {
+      grid-area: kira;
+    }
+  }
+
+  @media (min-width: 60rem) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "daniel daniel jonathan"
+      "jeanette patrick patrick"
+      "kira kira kira";
+
+    .daniel {
+      grid-area: daniel;
+    }
+    .jonathan {
+      grid-area: jonathan;
+    }
+    .jeanette {
+      grid-area: jeanette;
+    }
+    .patrick {
+      grid-area: patrick;
+    }
+    .kira {
+      grid-area: kira;
+    }
+  }
+
+  @media (min-width: 78rem) {
+    position: relative;
+
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "daniel daniel jonathan kira"
+      "jeanette patrick patrick kira";
+
+    .daniel {
+      grid-area: daniel;
+
+      .aspas {
+        display: block;
+        width: 7.5rem;
+        height: auto;
+        position: absolute;
+        left: clamp(20rem, 32vw, 30rem);
+        top: 0.05rem;
+      }
+
+      .principal {
+        position: relative;
+        z-index: 1000;
+      }
+    }
+
+    .jonathan {
+      grid-area: jonathan;
+    }
+
+    .kira {
+      grid-area: kira;
+    }
+
+    .jeanette {
+      grid-area: jeanette;
+    }
+
+    .patrick {
+      grid-area: patrick;
+    }
+  }
+}
